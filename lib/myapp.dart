@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:route_task/presentation/home/home_screen.dart';
+import 'config/theme/theme.dart';
 import 'core/utils/routes_manager.dart';
 
 class MyApp extends StatelessWidget {
@@ -8,13 +10,20 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Route task',
-      debugShowCheckedModeBanner: false,
-      routes: {
-        RoutesManager.homeRouteName:(_) => const HomeScreen()
-      },
-      initialRoute: RoutesManager.homeRouteName,
+    return ScreenUtilInit(
+      designSize: const Size(430, 932),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) => MaterialApp(
+        title: 'Route task',
+        debugShowCheckedModeBanner: false,
+        routes: {
+          RoutesManager.homeRouteName:(_) => const HomeScreen()
+        },
+        theme: AppTheme.lightTheme,
+        themeMode: ThemeMode.light,
+        initialRoute: RoutesManager.homeRouteName,
+      ),
     );
   }
 }
