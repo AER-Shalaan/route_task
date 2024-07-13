@@ -2,8 +2,7 @@
 
 ## Overview
 
-This project is a Flutter application designed to display a list of products fetched from an API. The application follows clean architecture principles and employs the MVVM (Model-View-ViewModel) pattern, repository pattern, and dependency injection to ensure a scalable and maintainable codebase. The UI is adaptive, offering a seamless experience across various screen sizes and orientations.
-
+This project is a Flutter application designed to display a list of products fetched from an API. The application follows clean architecture principles and employs the MVVM (Model-View-ViewModel) pattern, repository pattern, and dependency injection to ensure a scalable and maintainable codebase.
 ## Features
 
 - **Clean Architecture**: Ensures separation of concerns, facilitating testing and maintenance.
